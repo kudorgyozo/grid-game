@@ -12,7 +12,7 @@ builder.Services.AddSingleton<GameState, GameState>();
 //builder.Services.AddCors(options => {
 //    options.AddPolicy(name: CORSPolicy,
 //                      policy => {
-//                          policy.WithOrigins("http://localhost:3000")
+//                          policy.WithOrigins("http://localhost:5173")
 //                          .AllowAnyMethod()
 //                          .AllowAnyOrigin()
 //                          .AllowCredentials();
@@ -28,7 +28,7 @@ app.UseHttpsRedirection();
 app.UseCors(builder => builder
     .AllowAnyMethod()
     .AllowAnyHeader()
-    .WithOrigins("http://localhost:3000")
+    .WithOrigins("http://localhost:5173")
     .AllowCredentials());
 
 app.UseAuthorization();

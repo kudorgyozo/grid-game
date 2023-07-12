@@ -1,7 +1,5 @@
-import React, { useEffect, useReducer, useRef, useState } from 'react';
-import logo from './logo.svg';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import axios from 'axios';
 import * as signalR from '@microsoft/signalr';
 
 export const Chat = () => {

@@ -41,6 +41,10 @@ type GameGridProps = React.DOMAttributes<HTMLDivElement> &
 export const GameGrid = forwardRef((props: GameGridProps, ref) => {
     const { onCellClick, data, colors, ...rest } = props;
     return (
+        // <div className='grid grid-cols-10 gap-1'>
+        //     <div className='grid-spacing-1'></div>
+        //     <div className='grid-spacing-1'></div>
+        // </div>
         <StyledGrid {...rest} ref={ref}>
             {props.data.map((row, i) => (
                 <React.Fragment key={i}>

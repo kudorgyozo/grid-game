@@ -47,13 +47,25 @@ export const Game = () => {
     };
 
     return (
-        <div className='Game'>
+        <div>
+            <div className='inline-grid grid-cols-game grid-rows-game gap-game'>
+                <div className=''></div>
+                <div className=''></div>
+            </div>
             <div>
                 <input type='text' ref={ref} />
-                <button onClick={connect} disabled={!!connection}>
+                <button
+                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                    onClick={connect}
+                    disabled={!!connection}
+                >
                     Connect
                 </button>
-                <button onClick={disconnect} disabled={!connection}>
+                <button
+                    className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                    onClick={disconnect}
+                    disabled={!connection}
+                >
                     Disconnect
                 </button>
                 <div>
