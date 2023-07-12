@@ -13,7 +13,13 @@
         }
 
         private PlayerState CreatePlayerStateFromSession(Session session) {
-            return null;
+            var state = new PlayerState {
+                Pieces = new List<GamePiece> {
+                    GamePiece.Piece1,
+                    GamePiece.Piece2,
+                }
+            };
+            return state;
         }
 
         private Session FindSessionForPlayer(string name, string connectionId) {

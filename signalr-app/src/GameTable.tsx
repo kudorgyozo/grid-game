@@ -6,7 +6,7 @@ import { DefaultColors, GameGrid } from './GameGrid';
 import { generate2DArray, getEventCoordsInElement, pxToGridRound } from './utils';
 
 export type Props = {
-    pieces: PieceInfo[];
+    pieces: PieceInfo[] | undefined;
     onDrop: (id: number) => void;
 };
 
@@ -23,7 +23,7 @@ export const GameTable = (props: Props) => {
                 y: dropPos.y - grabPos.y,
             });
             //console.log(gridStartPos);
-            const piece = pieces.find((p) => p.id === id);
+            const piece = pieces?.find((p) => p.id === id);
 
             if (!piece) return;
             if (gridStartPos.x < 0 || gridStartPos.y < 0) return;
